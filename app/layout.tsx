@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-export const ftRegolaNeue = localFont({
+const ftRegolaNeue = localFont({
   src: [
     {
       path: "./_assets/fonts/FTRegolaNeueTrial-Regular.woff2",
@@ -29,7 +29,7 @@ export const ftRegolaNeue = localFont({
   variable: "--font-brand",
 });
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ftRegolaNeue.variable} ${inter.variable} font-sans antialiased`}
+        className={`${ftRegolaNeue.variable} ${inter.variable} relative mx-auto max-w-[1082px] font-sans antialiased text-[--fg-1] bg-[--bg-1] has-[header[data-hamburger-open="true"]]:overflow-clip`}
       >
         {children}
       </body>

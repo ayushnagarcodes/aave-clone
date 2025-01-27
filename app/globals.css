@@ -8,6 +8,13 @@
   h3 {
     @apply font-brand;
   }
+
+  img,
+  svg {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 :root {
@@ -36,9 +43,6 @@
   --ease-snappy: cubic-bezier(0.175, 0.885, 0.32, 1.1);
   --duration-swift: 1800ms;
   --ease-swift: cubic-bezier(0.19, 1, 0.22, 1);
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
   --scrollbar-width: 6px;
 }
 
