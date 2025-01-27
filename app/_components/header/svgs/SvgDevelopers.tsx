@@ -35,79 +35,46 @@ function SvgDevelopers({ hoveredLink }: SvgResourcesProps) {
         }}
       ></motion.rect>
 
-      {/******************/}
-      {/* For Bug Bounty */}
-      {/******************/}
+      {/*********************/}
+      {/* For Documentation */}
+      {/*********************/}
       <motion.g
-        style={{
-          transformOrigin: "210px 96px 0px",
-        }}
+        style={{ transformOrigin: "128px 192px 0px" }}
         initial={false}
-        animate={{ x: hoveredLink === "Bug Bounty" ? 0 : 170 }}
-        transition={{ ease, duration: hoveredLink === "Bug Bounty" ? 1 : 0.3 }}
+        animate={{ y: hoveredLink === "Documentation" ? 0 : 128 }}
+        transition={{ ease, duration: 0.5 }}
       >
-        <motion.g
-          style={{
-            transformOrigin: "210px 96px 0px",
-          }}
-          animate={{ rotate: hoveredLink === "Bug Bounty" ? 0 : -45 }}
-          transition={{
-            ease,
-            duration: 0.8,
-          }}
-        >
-          <path
-            d="M86 96C86 164.483 141.517 220 210 220L210 96L86 96Z"
-            fill="#FFF7AE"
-            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
-          ></path>
-          <path
-            d="M334 96C334 27.5167 278.483 -28 210 -27.9999L210 96L334 96Z"
-            fill="#FFF7AE"
-            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
-          ></path>
-          <path
-            d="M210 -28C141.517 -28 86.0001 27.5167 86.0001 96L210 96L210 -28Z"
-            fill="#FFD631"
-            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
-          ></path>
-          <path
-            d="M210 220C278.483 220 334 164.483 334 96L210 96L210 220Z"
-            fill="#FFD631"
-            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
-          ></path>
-        </motion.g>
-        <motion.g
-          style={{
-            transformOrigin: "210px 96px 0px",
-          }}
-          animate={{ rotate: hoveredLink === "Bug Bounty" ? 0 : 90 }}
-          transition={{
-            ease,
-            duration: 0.8,
-          }}
-        >
-          <path
-            d="M210 174.324C253.26 174.324 288.328 139.256 288.328 95.9961L210 95.9961L210 174.324Z"
-            fill="#FFF7AE"
-            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
-          ></path>
-          <path
-            d="M210 17.6677C166.74 17.6677 131.672 52.7365 131.672 95.9961L210 95.9961L210 17.6677Z"
-            fill="#FFF7AE"
-            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
-          ></path>
-          <path
-            d="M131.672 95.9961C131.672 139.256 166.74 174.324 210 174.324L210 95.9961L131.672 95.9961Z"
-            fill="#FFD631"
-            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
-          ></path>
-          <path
-            d="M288.328 95.9961C288.328 52.7365 253.26 17.6677 210 17.6677L210 95.9961L288.328 95.9961Z"
-            fill="#FFD631"
-            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
-          ></path>
-        </motion.g>
+        <path
+          d="M128 192C128 262.692 185.308 320 256 320L256 64C185.308 64 128 121.308 128 192Z"
+          fill="#B5E7FA"
+          style={{ fill: "color(display-p3 0.7098 0.9059 0.9804)" }}
+        ></path>
+        <path
+          d="M128 192C128 262.692 70.6924 320 -3.35703e-05 320L0 64C70.6925 64 128 121.308 128 192Z"
+          fill="#DFF6FF"
+          style={{ fill: "color(display-p3 0.8739 0.9653 1.0000)" }}
+        ></path>
+      </motion.g>
+      <motion.g
+        style={{ transformOrigin: "128px 252px 0px" }}
+        initial={false}
+        animate={{ y: hoveredLink === "Documentation" ? 0 : 68 }}
+        transition={{
+          ease,
+          duration: 0.35,
+          delay: hoveredLink === "Documentation" ? 0.15 : 0,
+        }}
+      >
+        <path
+          d="M128 252C128 322.692 70.6924 380 -3.35703e-05 380L0 124C70.6925 124 128 181.308 128 252Z"
+          fill="#B5E7FA"
+          style={{ fill: "color(display-p3 0.7098 0.9059 0.9804)" }}
+        ></path>
+        <path
+          d="M128 252C128 322.692 185.308 380 256 380L256 124C185.308 124 128 181.308 128 252Z"
+          fill="#DFF6FF"
+          style={{ fill: "color(display-p3 0.8739 0.9653 1.0000)" }}
+        ></path>
       </motion.g>
 
       {/****************/}
@@ -202,44 +169,81 @@ function SvgDevelopers({ hoveredLink }: SvgResourcesProps) {
         ></path>
       </motion.g>
 
-      {/*********************/}
-      {/* For Documentation */}
-      {/*********************/}
+      {/******************/}
+      {/* For Bug Bounty */}
+      {/******************/}
       <motion.g
-        style={{ transformOrigin: "128px 192px 0px" }}
-        animate={{ y: hoveredLink === "Documentation" ? 0 : 128 }}
-        transition={{ ease, duration: 0.5 }}
-      >
-        <path
-          d="M128 192C128 262.692 185.308 320 256 320L256 64C185.308 64 128 121.308 128 192Z"
-          fill="#B5E7FA"
-          style={{ fill: "color(display-p3 0.7098 0.9059 0.9804)" }}
-        ></path>
-        <path
-          d="M128 192C128 262.692 70.6924 320 -3.35703e-05 320L0 64C70.6925 64 128 121.308 128 192Z"
-          fill="#DFF6FF"
-          style={{ fill: "color(display-p3 0.8739 0.9653 1.0000)" }}
-        ></path>
-      </motion.g>
-      <motion.g
-        style={{ transformOrigin: "128px 252px 0px" }}
-        animate={{ y: hoveredLink === "Documentation" ? 0 : 68 }}
-        transition={{
-          ease,
-          duration: 0.35,
-          delay: hoveredLink === "Documentation" ? 0.15 : 0,
+        style={{
+          transformOrigin: "210px 96px 0px",
         }}
+        initial={false}
+        animate={{ x: hoveredLink === "Bug Bounty" ? 0 : 170 }}
+        transition={{ ease, duration: hoveredLink === "Bug Bounty" ? 1 : 0.3 }}
       >
-        <path
-          d="M128 252C128 322.692 70.6924 380 -3.35703e-05 380L0 124C70.6925 124 128 181.308 128 252Z"
-          fill="#B5E7FA"
-          style={{ fill: "color(display-p3 0.7098 0.9059 0.9804)" }}
-        ></path>
-        <path
-          d="M128 252C128 322.692 185.308 380 256 380L256 124C185.308 124 128 181.308 128 252Z"
-          fill="#DFF6FF"
-          style={{ fill: "color(display-p3 0.8739 0.9653 1.0000)" }}
-        ></path>
+        <motion.g
+          style={{
+            transformOrigin: "210px 96px 0px",
+          }}
+          initial={false}
+          animate={{ rotate: hoveredLink === "Bug Bounty" ? 0 : -45 }}
+          transition={{
+            ease,
+            duration: 0.8,
+          }}
+        >
+          <path
+            d="M86 96C86 164.483 141.517 220 210 220L210 96L86 96Z"
+            fill="#FFF7AE"
+            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
+          ></path>
+          <path
+            d="M334 96C334 27.5167 278.483 -28 210 -27.9999L210 96L334 96Z"
+            fill="#FFF7AE"
+            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
+          ></path>
+          <path
+            d="M210 -28C141.517 -28 86.0001 27.5167 86.0001 96L210 96L210 -28Z"
+            fill="#FFD631"
+            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
+          ></path>
+          <path
+            d="M210 220C278.483 220 334 164.483 334 96L210 96L210 220Z"
+            fill="#FFD631"
+            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
+          ></path>
+        </motion.g>
+        <motion.g
+          style={{
+            transformOrigin: "210px 96px 0px",
+          }}
+          initial={false}
+          animate={{ rotate: hoveredLink === "Bug Bounty" ? 0 : 90 }}
+          transition={{
+            ease,
+            duration: 0.8,
+          }}
+        >
+          <path
+            d="M210 174.324C253.26 174.324 288.328 139.256 288.328 95.9961L210 95.9961L210 174.324Z"
+            fill="#FFF7AE"
+            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
+          ></path>
+          <path
+            d="M210 17.6677C166.74 17.6677 131.672 52.7365 131.672 95.9961L210 95.9961L210 17.6677Z"
+            fill="#FFF7AE"
+            style={{ fill: "color(display-p3 1.0000 0.9690 0.6842)" }}
+          ></path>
+          <path
+            d="M131.672 95.9961C131.672 139.256 166.74 174.324 210 174.324L210 95.9961L131.672 95.9961Z"
+            fill="#FFD631"
+            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
+          ></path>
+          <path
+            d="M288.328 95.9961C288.328 52.7365 253.26 17.6677 210 17.6677L210 95.9961L288.328 95.9961Z"
+            fill="#FFD631"
+            style={{ fill: "color(display-p3 1.0000 0.8392 0.1922)" }}
+          ></path>
+        </motion.g>
       </motion.g>
     </svg>
   );

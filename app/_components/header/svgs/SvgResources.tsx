@@ -45,6 +45,7 @@ function SvgResources({ hoveredLink }: SvgResourcesProps) {
           fill: "color(display-p3 0.7391 0.7337 1)",
           transformOrigin: "128px 29px 0px",
         }}
+        initial={false}
         animate={{ y: hoveredLink === "Brand" ? 0 : -100 }}
         transition={{ ease, duration: 0.5 }}
       ></motion.path>
@@ -55,6 +56,7 @@ function SvgResources({ hoveredLink }: SvgResourcesProps) {
           fill: "color(display-p3 0.5961 0.5882 1)",
           transformOrigin: "128px -6.5px 0px",
         }}
+        initial={false}
         animate={{
           y: hoveredLink === "Brand" ? 0 : -100,
         }}
@@ -71,6 +73,7 @@ function SvgResources({ hoveredLink }: SvgResourcesProps) {
           fill: "color(display-p3 0.8863 0.8784 1)",
           transformOrigin: "128px 227px 0px",
         }}
+        initial={false}
         animate={{ y: hoveredLink === "Brand" ? 0 : 100 }}
         transition={{ ease, duration: 0.5 }}
       ></motion.path>
@@ -81,6 +84,7 @@ function SvgResources({ hoveredLink }: SvgResourcesProps) {
           fill: "color(display-p3 0.7391 0.7337 1)",
           transformOrigin: "128px 262.5px 0px",
         }}
+        initial={false}
         animate={{
           y: hoveredLink === "Brand" ? 0 : 100,
         }}
