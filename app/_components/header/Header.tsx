@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "motion/react";
 import Logo from "@/_components/header/Logo";
 import DropDownNav from "@/_components/header/DropDownNav";
@@ -32,13 +30,13 @@ function Header() {
   );
 
   return (
-    <div className="fixed w-full top-0 z-50 mx-auto max-w-[1082px]">
+    <div className="fixed top-0 left-0 right-0 z-50">
       <motion.header
         data-hamburger-open={isViewportSmall && isHamburgerOpen}
         variants={headerVariants}
         initial={false}
         animate={isPageAtTop ? "default" : "shrink"}
-        className="md:px-12 px-6 flex items-center justify-between md:pb-0 pb-1"
+        className="mx-auto w-full max-w-[1082px] md:px-12 px-6 flex items-center justify-between md:pb-0 pb-1 bg-white"
       >
         <Logo />
         <DropDownNav />

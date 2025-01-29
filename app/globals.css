@@ -38,6 +38,11 @@
   --blue-4: #f6fcfe;
   --gho-1: #28d358;
   --focus: #9898ff;
+  --red: #ff8947;
+  --blue: #b5e7fa;
+  --purple: #9896ff;
+  --green: #63bbb6;
+  --yellow: #ffd631;
 
   --duration-snappy: 750ms;
   --ease-snappy: cubic-bezier(0.175, 0.885, 0.32, 1.1);
