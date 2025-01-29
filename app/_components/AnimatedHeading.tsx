@@ -8,6 +8,11 @@ interface AnimatedHeadingProps {
   delay?: number;
 }
 
+const headingClasses = {
+  h1: "mb-4 text-[2.5rem] md:text-5xl font-semibold leading-[3rem] md:leading-[55px] tracking-[-.075rem] md:tracking-[-1.44px]",
+  h2: "text-center md:text-[40px] font-semibold md:leading-[135%] md:tracking-[-0.8px] text-[2.5rem] font-semibold leading-[3.4375rem] tracking-[-0.075rem]",
+};
+
 const headingChildVariants = {
   hidden: { opacity: 0, y: "50%", rotateX: -45 },
   visible: {
@@ -21,21 +26,25 @@ const headingChildVariants = {
 function AnimatedHeading({ text, level, delay }: AnimatedHeadingProps) {
   const wordArray = text.split(" ");
   const Component = motion[`h${level}` as const];
-  const h1Classes =
-    "mb-4 text-[var(--fg-1)] font-brand text-[2.5rem] md:text-5xl font-semibold leading-[3rem] md:leading-[55px] tracking-[-.075rem] md:tracking-[-1.44px]";
 
   const headingVariants = useMemo(
     () => ({
       hidden: {},
       visible: {
-        transition: { staggerChildren: 0.05, delayChildren: delay ?? 0 },
+        transition: { staggerChildren: 0.06, delayChildren: delay ?? 0 },
       },
     }),
     [delay]
   );
 
   return (
-    <Component variants={headingVariants} className={h1Classes}>
+    <Component
+      variants={headingVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className={headingClasses[`h${level}`]}
+    >
       <span>
         {wordArray.map((word, index) => (
           <motion.span

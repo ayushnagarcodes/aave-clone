@@ -41,7 +41,7 @@ const AnimatedLink = motion.create(Link);
 
 const generateHeroChildVariants = (y: number) => ({
   hidden: { opacity: 0, y },
-  visible: {
+  animate: {
     opacity: 1,
     y: 0,
   },
@@ -50,15 +50,17 @@ const generateHeroChildVariants = (y: number) => ({
 function Hero() {
   return (
     <motion.section
-      variants={{ hidden: {}, visible: {} }}
+      variants={{
+        animate: {},
+      }}
       initial="hidden"
-      whileInView="visible"
+      animate="animate"
       className="pt-24 md:pt-[9.375rem] md:px-12 px-5"
     >
       <div className="relative w-[min(100%,986px)] mx-auto z-10">
         <motion.div
           variants={generateHeroChildVariants(8)}
-          transition={{ duration: 1, ease: easeSwift, delay: 2.4 }}
+          transition={{ duration: 1, ease: easeSwift, delay: 2.5 }}
           className="pb-5"
         >
           <Link
@@ -80,7 +82,7 @@ function Hero() {
 
         <motion.div
           variants={generateHeroChildVariants(32)}
-          transition={{ duration: 0.75, ease: easeSwift, delay: 1.5 }}
+          transition={{ duration: 0.85, ease: easeSwift, delay: 1.6 }}
         >
           <p
             style={{ fontFeatureSettings: '"cv11" on,"ss01" on' }}
@@ -93,7 +95,7 @@ function Hero() {
 
         <motion.div
           variants={generateHeroChildVariants(32)}
-          transition={{ duration: 0.75, ease: easeSwift, delay: 1.65 }}
+          transition={{ duration: 0.85, ease: easeSwift, delay: 1.75 }}
         >
           <AnimatedLink
             href="/"
@@ -120,7 +122,7 @@ function Hero() {
 
         <motion.div
           variants={generateHeroChildVariants(32)}
-          transition={{ duration: 0.75, ease: easeSwift, delay: 1.8 }}
+          transition={{ duration: 0.85, ease: easeSwift, delay: 1.9 }}
         >
           <div className="flex items-center gap-2 mt-6">
             <SvgPulse />

@@ -14,3 +14,5 @@ export type ResourcesLinkType =
   | "Governance";
 
 export type DevelopersLinkType = "Documentation" | "Security" | "Bug Bounty";
+
+export type IntroTabType = "Supply" | "Borrow";

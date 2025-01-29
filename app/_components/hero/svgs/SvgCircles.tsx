@@ -14,7 +14,7 @@ const springOptions = {
 
 const generateCircleVariants = (x: number, y: number) => ({
   hidden: { opacity: 0, x, y: 1000 },
-  visible: {
+  animate: {
     opacity: 1,
     x,
     y,
@@ -59,7 +59,7 @@ const updateVelocities = (
     );
 
     if (shouldRotate) {
-      velocities[i].set(parseFloat(newVelocity.toFixed(2)) * 2);
+      velocities[i].set(parseFloat(newVelocity.toFixed(2)) * 3);
     }
   }
 };
@@ -149,8 +149,8 @@ function SvgCircles() {
       <g clipPath="url(#hero-animation-mask)">
         <g transform="scale(1.08)">
           <motion.g
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            transition={{ staggerChildren: 0.1, delayChildren: 0.3 }}
+            variants={{ hidden: { opacity: 0 }, animate: { opacity: 1 } }}
+            transition={{ staggerChildren: 0.05, delayChildren: 0.3 }}
           >
             {/* 1 */}
             <motion.g
