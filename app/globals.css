@@ -19,7 +19,7 @@
 
 @layer utilities {
   .section-styles {
-    @apply flex flex-col items-center w-full px-5 md:px-12 py-[100px];
+    @apply relative flex flex-col items-center w-full px-5 md:px-12 py-[100px];
   }
 }
 

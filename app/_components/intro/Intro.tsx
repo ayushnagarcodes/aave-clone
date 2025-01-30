@@ -4,7 +4,6 @@ import type { IntroTabType } from "@/_types/types";
 import { useState } from "react";
 import BtnIntroTab from "@/_components/intro/BtnIntroTab";
 import { motion } from "motion/react";
-import { easeSwift } from "@/_lib/utils";
 
 function Intro() {
   const [activeIntroTab, setActiveIntroTab] = useState<IntroTabType>("Supply");
@@ -20,7 +19,7 @@ function Intro() {
 
         <SvgIntro activeIntroTab={activeIntroTab} />
 
-        <div className="overflow-clip mt-12 h-auto">
+        <div className="overflow-clip mt-12 min-h-[92px]">
           <motion.div
             style={{
               gridTemplateColumns:

@@ -15,29 +15,34 @@ function BtnIntroTab({
   activeState,
   description,
 }: BtnIntroTabProps) {
+  const isActive = currentActiveTab === activeState;
+
   return (
     <button
       className={`${
-        currentActiveTab === activeState ? "text-[#008aff]" : "text-[--fg-3]"
+        isActive ? "text-[#008aff]" : "text-[--fg-3]"
       } flex flex-col gap-4 h-fit cursor-pointer transition-colors duration-200 ease-in-out text-start`}
       onClick={() => setActiveIntroTab(activeState)}
     >
       <span
         className={`block rounded-[3px] w-full h-[3px] ${
-          currentActiveTab === activeState ? "bg-current" : "bg-[--border-1]"
+          isActive ? "bg-current" : "bg-[--border-1]"
         } transition-colors duration-200 ease-in-out`}
       ></span>
+
       <span className="block text-2xl font-semibold leading-[135%] tracking-[-0.47px] text-inherit">
         {activeState}
       </span>
+
       <motion.span
+        initial={false}
         animate={
-          currentActiveTab === activeState
+          isActive
             ? {
                 opacity: 1,
                 y: 0,
                 display: "block",
-                transition: { delay: 0.7, duration: 0.5, ease: easeSwift },
+                transition: { delay: 0.6, duration: 0.5, ease: easeSwift },
               }
             : {
                 opacity: 0,
