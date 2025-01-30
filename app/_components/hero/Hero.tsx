@@ -74,11 +74,7 @@ function Hero() {
           </Link>
         </motion.div>
 
-        <AnimatedHeading
-          text="Access the full power of DeFi."
-          level={1}
-          delay={0.75}
-        />
+        <AnimatedHeading text="Access the full power of DeFi." level={1} />
 
         <motion.div
           variants={generateHeroChildVariants(32)}

@@ -19,7 +19,15 @@
 
 @layer utilities {
   .section-styles {
-    @apply relative flex flex-col items-center w-full px-5 md:px-12 py-[100px];
+    @apply relative flex flex-col items-center w-full px-5 md:px-12 py-12 md:py-[100px];
+  }
+
+  .section-border-b {
+    @apply after:content-[''] after:absolute after:bottom-0 after:w-[min(100%,1082px)] after:border-b after:border-[--border-1];
+  }
+
+  .section-inner {
+    @apply relative w-full max-w-[986px];
   }
 }
 

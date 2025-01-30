@@ -22,7 +22,7 @@ function Header() {
         boxShadow: "rgba(0, 0, 0, 0.06) 0px 0px 0px 0px",
       },
       shrink: {
-        paddingTop: 0,
+        paddingTop: isViewportSmall ? 4 : 0,
         boxShadow: "rgba(0, 0, 0, 0.06) 0px 1px 0px 0px",
       },
     }),
@@ -36,7 +36,7 @@ function Header() {
         variants={headerVariants}
         initial={false}
         animate={isPageAtTop ? "default" : "shrink"}
-        className="mx-auto w-full max-w-[1082px] md:px-12 px-6 flex items-center justify-between md:pb-0 pb-1 bg-white"
+        className="mx-auto w-full max-w-[1082px] md:px-12 px-6 flex items-center justify-between md:py-0 py-1 bg-white"
       >
         <Logo />
         <DropDownNav />
