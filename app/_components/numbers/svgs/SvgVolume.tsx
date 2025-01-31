@@ -1,6 +1,5 @@
 import { easeSwift } from "@/_lib/utils";
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 
 const rowRevealVariants = {
   // direction: -1 (from left) or 1 (from right)
@@ -28,21 +27,8 @@ const rowAnimateVariants = {
 };
 
 function SvgVolume() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 1, once: true });
-
   return (
-    <motion.svg
-      ref={ref}
-      variants={{
-        hidden: {},
-        visible: {},
-        animate: {},
-      }}
-      initial="hidden"
-      animate={isInView ? "animate" : "hidden"}
-      whileInView="visible"
-      viewport={{ once: true, amount: 1 }}
+    <svg
       width="457"
       height="250"
       viewBox="545 0 457 250"
@@ -244,7 +230,7 @@ function SvgVolume() {
           </g>
         </motion.g>
       </motion.g>
-    </motion.svg>
+    </svg>
   );
 }
 

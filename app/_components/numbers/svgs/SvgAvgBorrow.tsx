@@ -2,25 +2,11 @@ import {
   numbersCircleAnimateVariants,
   numbersCircleRevealVariants,
 } from "@/_lib/utils";
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 
 function SvgAvgBorrow() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 1, once: true });
-
   return (
-    <motion.svg
-      ref={ref}
-      variants={{
-        hidden: {},
-        visible: {},
-        animate: {},
-      }}
-      initial={["hidden", "initial"]}
-      animate={["revealAnimate", isInView ? "animate" : "initial"]}
-      whileInView="visible"
-      viewport={{ once: true, amount: 1 }}
+    <svg
       width="457"
       height="250"
       viewBox="0 0 457 250"
@@ -121,7 +107,7 @@ function SvgAvgBorrow() {
           </motion.g>
         </motion.g>
       </motion.g>
-    </motion.svg>
+    </svg>
   );
 }
 
