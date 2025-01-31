@@ -28,10 +28,10 @@ function Numbers() {
   });
 
   return (
-    <section className="section-styles section-border">
+    <section className="section-styles section-border-b">
       <div className="section-inner grid grid-cols-1 md:grid-cols-2 gap-x-[4.5rem]">
         <div className="relative top-0 m-0 pb-12 md:sticky md:top-[9.375rem] self-start md:pb-[17px] md:ml-6">
-          <AnimatedHeading level={2} text="Aave by the numbers." />
+          <AnimatedHeading level={2} text="Aave by the numbers." delay={0.4} />
           <p className="mt-3 text-lg md:text-xl font-medium !leading-[135%] tracking-[-0.33px] text-[--fg-2]">
             Aave is one of the largest DeFi protocols with billions of dollars
             in weekly volume across Ethereum and 12+ networks.

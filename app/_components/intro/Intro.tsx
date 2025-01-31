@@ -11,7 +11,12 @@ function Intro() {
   return (
     <section className="section-styles section-border-b !pt-12 md:!pt-[9.375rem]">
       <div className="section-inner">
-        <AnimatedHeading level={2} text="Meet Aave." className="text-center" />
+        <AnimatedHeading
+          level={2}
+          text="Meet Aave."
+          className="text-center"
+          delay={0.4}
+        />
 
         <p className="mt-3 text-center text-lg md:text-xl font-medium !leading-[135%] tracking-[-0.33px] text-[--fg-2]">
           Earn interest and borrow assets.
@@ -21,9 +26,12 @@ function Intro() {
 
         <div className="overflow-clip mt-12 min-h-[92px]">
           <motion.div
-            style={{
+            initial={{
+              gridTemplateColumns: "11fr 4fr",
+            }}
+            animate={{
               gridTemplateColumns:
-                activeIntroTab === "Supply" ? "11fr 4fr" : "4fr 11fr",
+                activeIntroTab === "Supply" ? "6fr 4fr" : "4fr 6fr",
             }}
             className="grid gap-12 md:px-6 px-0 transition-[grid-template-columns] duration-300 ease-out"
           >

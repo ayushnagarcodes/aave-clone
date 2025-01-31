@@ -1,4 +1,4 @@
-import NumberCounter from "../NumberCounter";
+import NumberCounter from "@/_components/NumberCounter";
 
 interface NumberCardTextProps {
   value: number;
