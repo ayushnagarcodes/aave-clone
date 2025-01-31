@@ -1,7 +1,7 @@
 import useDebounce from "@/_hooks/useDebounce";
 import { easeSwift } from "@/_lib/utils";
 import type { MotionValue } from "motion/react";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { motion, useSpring, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const svgCircleTransition = { duration: 1.2, ease: easeSwift };
@@ -59,7 +59,7 @@ const updateVelocities = (
     );
 
     if (shouldRotate) {
-      velocities[i].set(parseFloat(newVelocity.toFixed(2)) * 3);
+      velocities[i].set(parseFloat(newVelocity.toFixed(2)) * 0.9);
     }
   }
 };
@@ -76,29 +76,23 @@ function SvgCircles() {
   const lastUpdate = useRef(performance.now());
 
   // Generating rotate values for each circle from mouse velocity
-  const velocity1 = useMotionValue(0);
-  const smoothVelocity1 = useSpring(velocity1, springOptions);
-  const rotate1 = useTransform(smoothVelocity1, [-50, 0, 50], [-360, 0, 360]);
+  const velocity1 = useSpring(0, springOptions);
+  const rotate1 = useTransform(velocity1, [-50, 0, 50], [-360, 0, 360]);
 
-  const velocity2 = useMotionValue(0);
-  const smoothVelocity2 = useSpring(velocity2, springOptions);
-  const rotate2 = useTransform(smoothVelocity2, [-50, 0, 50], [-360, 0, 360]);
+  const velocity2 = useSpring(0, springOptions);
+  const rotate2 = useTransform(velocity2, [-50, 0, 50], [-360, 0, 360]);
 
-  const velocity3 = useMotionValue(0);
-  const smoothVelocity3 = useSpring(velocity3, springOptions);
-  const rotate3 = useTransform(smoothVelocity3, [-50, 0, 50], [-360, 0, 360]);
+  const velocity3 = useSpring(0, springOptions);
+  const rotate3 = useTransform(velocity3, [-50, 0, 50], [-360, 0, 360]);
 
-  const velocity4 = useMotionValue(0);
-  const smoothVelocity4 = useSpring(velocity4, springOptions);
-  const rotate4 = useTransform(smoothVelocity4, [-50, 0, 50], [-360, 0, 360]);
+  const velocity4 = useSpring(0, springOptions);
+  const rotate4 = useTransform(velocity4, [-50, 0, 50], [-360, 0, 360]);
 
-  const velocity5 = useMotionValue(0);
-  const smoothVelocity5 = useSpring(velocity5, springOptions);
-  const rotate5 = useTransform(smoothVelocity5, [-50, 0, 50], [-360, 0, 360]);
+  const velocity5 = useSpring(0, springOptions);
+  const rotate5 = useTransform(velocity5, [-50, 0, 50], [-360, 0, 360]);
 
-  const velocity6 = useMotionValue(0);
-  const smoothVelocity6 = useSpring(velocity6, springOptions);
-  const rotate6 = useTransform(smoothVelocity6, [-50, 0, 50], [-360, 0, 360]);
+  const velocity6 = useSpring(0, springOptions);
+  const rotate6 = useTransform(velocity6, [-50, 0, 50], [-360, 0, 360]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -131,7 +125,7 @@ function SvgCircles() {
     lastUpdate.current = currentTime;
   };
 
-  const debouncedPointerMove = useDebounce(handlePointerMove, 75);
+  const debouncedPointerMove = useDebounce(handlePointerMove, 10);
 
   return (
     <motion.svg
