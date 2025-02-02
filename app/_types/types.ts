@@ -16,3 +16,9 @@ export type ResourcesLinkType =
 export type DevelopersLinkType = "Documentation" | "Security" | "Bug Bounty";
 
 export type IntroTabType = "Supply" | "Borrow";
+
+export interface FeatureType {
+  id: number;
+  title: string;
+  description: string;
+}

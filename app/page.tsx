@@ -6,6 +6,7 @@ import Hero from "@/_components/hero/Hero";
 import Intro from "@/_components/intro/Intro";
 import { motion } from "motion/react";
 import Numbers from "@/_components/numbers/Numbers";
+import Features from "@/_components/features/Features";
 
 const homeVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <Intro />
         <Numbers />
+        <Features />
       </motion.main>
     </>
   );

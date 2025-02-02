@@ -7,25 +7,18 @@ import SvgAvgBorrow from "@/_components/numbers/svgs/SvgAvgBorrow";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
+const viewportOptions = { amount: 1, once: true };
+
 function Numbers() {
   const svgNetDepositsRef = useRef(null);
   const svgVolumeRef = useRef(null);
   const svgAvgSupplyRef = useRef(null);
   const svgAvgBorrowRef = useRef(null);
 
-  const isSvgNetDepositsInView = useInView(svgNetDepositsRef, {
-    amount: 1,
-    once: true,
-  });
-  const isSvgVolumeInView = useInView(svgVolumeRef, { amount: 1, once: true });
-  const isSvgAvgSupplyInView = useInView(svgAvgSupplyRef, {
-    amount: 1,
-    once: true,
-  });
-  const isSvgAvgBorrowInView = useInView(svgAvgBorrowRef, {
-    amount: 1,
-    once: true,
-  });
+  const isSvgNetDepositsInView = useInView(svgNetDepositsRef, viewportOptions);
+  const isSvgVolumeInView = useInView(svgVolumeRef, viewportOptions);
+  const isSvgAvgSupplyInView = useInView(svgAvgSupplyRef, viewportOptions);
+  const isSvgAvgBorrowInView = useInView(svgAvgBorrowRef, viewportOptions);
 
   return (
     <section className="section-styles section-border-b">
@@ -65,7 +58,7 @@ function Numbers() {
               initial="hidden"
               animate={isSvgVolumeInView ? "animate" : "hidden"}
               whileInView="visible"
-              viewport={{ amount: 1, once: true }}
+              viewport={viewportOptions}
             >
               <SvgVolume />
             </motion.div>
@@ -93,7 +86,7 @@ function Numbers() {
                 isSvgAvgSupplyInView ? "animate" : "initial",
               ]}
               whileInView="visible"
-              viewport={{ amount: 1, once: true }}
+              viewport={viewportOptions}
             >
               <SvgAvgSupply />
             </motion.div>
@@ -121,7 +114,7 @@ function Numbers() {
                 isSvgAvgBorrowInView ? "animate" : "initial",
               ]}
               whileInView="visible"
-              viewport={{ amount: 1, once: true }}
+              viewport={viewportOptions}
             >
               <SvgAvgBorrow />
             </motion.div>
