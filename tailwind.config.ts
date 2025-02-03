@@ -31,6 +31,9 @@ export default {
         pulse: "pulse 2s ease-out infinite both",
         pulseDot: "pulseDot 2s ease-out infinite both",
       },
+      screens: {
+        xs: "520px", // Replace 'custom' and value as needed
+      },
     },
   },
   plugins: [],

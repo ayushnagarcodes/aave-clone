@@ -16,7 +16,7 @@ const logoVariants = {
   },
 };
 
-function Logo() {
+function SvgLogo() {
   return (
     <div>
       <Link className="flex py-5" href="/">
@@ -41,4 +41,4 @@ function Logo() {
   );
 }
 
-export default Logo;
+export default SvgLogo;

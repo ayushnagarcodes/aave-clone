@@ -22,3 +22,10 @@ export interface FeatureType {
   title: string;
   description: string;
 }
+
+export interface BuilderType {
+  id: number;
+  name: string;
+  Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  row: number;
+}

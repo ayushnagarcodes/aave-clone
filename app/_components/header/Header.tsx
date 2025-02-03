@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Logo from "@/_components/header/Logo";
+import SvgLogo from "@/_components/header/svgs/SvgLogo";
 import DropDownNav from "@/_components/header/DropDownNav";
 import { usePageState } from "@/_context/PageContext";
 import HamburgerNav from "@/_components/header/HamburgerNav";
@@ -38,7 +38,7 @@ function Header() {
         animate={isPageAtTop ? "default" : "shrink"}
         className="mx-auto w-full max-w-[1082px] md:px-12 px-6 flex items-center justify-between md:py-0 py-1 bg-white"
       >
-        <Logo />
+        <SvgLogo />
         <DropDownNav />
         <HamburgerNav
           isHamburgerOpen={isHamburgerOpen}
