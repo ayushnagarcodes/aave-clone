@@ -5,11 +5,17 @@ interface NumberCounterProps {
   value: number;
   decimals?: number;
   isInView?: boolean;
+  initialValue?: number;
 }
 
-function NumberCounter({ value, decimals = 0, isInView }: NumberCounterProps) {
-  const [displayValue, setDisplayValue] = useState(0);
-  const springValue = useSpring(0, { bounce: 0, duration: 1000 });
+function NumberCounter({
+  value,
+  decimals = 0,
+  isInView,
+  initialValue = 0,
+}: NumberCounterProps) {
+  const [displayValue, setDisplayValue] = useState(initialValue);
+  const springValue = useSpring(initialValue, { bounce: 0, duration: 1000 });
 
   useMotionValueEvent(springValue, "change", (v) =>
     setDisplayValue(parseFloat(v.toFixed(decimals)))
@@ -19,7 +25,7 @@ function NumberCounter({ value, decimals = 0, isInView }: NumberCounterProps) {
     if (isInView) springValue.set(value);
   }, [isInView, value]);
 
-  return <span>{displayValue}</span>;
+  return <span>{new Intl.NumberFormat("en-US").format(displayValue)}</span>;
 }
 
 export default NumberCounter;
