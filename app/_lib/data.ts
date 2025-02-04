@@ -1,4 +1,9 @@
-import type { BuilderType, FeatureType, MenuType } from "@/_types/types";
+import type {
+  BuilderType,
+  FeatureType,
+  MenuType,
+  SecurityType,
+} from "@/_types/types";
 import IconAaveChanInitiative from "@/_assets/svgs/builders/aave-chan-initiative.svg";
 import IconPaladin from "@/_assets/svgs/builders/paladin.svg";
 import IconTokenLogic from "@/_assets/svgs/builders/token-logic.svg";
@@ -210,3 +215,30 @@ export const buildersData: { group1: BuilderType[]; group2: BuilderType[] } = {
     },
   ],
 };
+
+export const securityCardsData: SecurityType[] = [
+  {
+    id: 1,
+    title: "Extensive Audits",
+    description:
+      "Peace of mind supported by multiple audits by the world’s leading security firms.",
+  },
+  {
+    id: 2,
+    title: "Bug Bounty",
+    description:
+      "Security is a top priority. Report vulnerabilities or bugs responsibly and get rewarded.",
+  },
+  {
+    id: 3,
+    title: "Shortfall Secured",
+    description:
+      "The Aave Protocol is secured with a backstop against protocol insolvency.",
+  },
+  {
+    id: 4,
+    title: "5 Years Strong",
+    description:
+      "Aave is leading the DeFi Renaissance, committed to it’s mission of bringing global finance onchain.",
+  },
+];

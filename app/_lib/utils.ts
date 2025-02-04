@@ -1,8 +1,9 @@
 import { cubicBezier } from "motion";
 
 export const easeSwift = cubicBezier(0.19, 1, 0.22, 1);
-
 export const easeSnappy = cubicBezier(0.175, 0.885, 0.32, 1.1);
+export const easeInOutSharp = cubicBezier(0.5, 0, 0.1, 1);
+export const backInSmooth = cubicBezier(0.7, -0.4, 0.3, 1.1);
 
 // For SVG animations in 'Numbers' section
 export const numbersCircleRevealVariants = {

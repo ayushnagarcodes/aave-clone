@@ -29,3 +29,9 @@ export interface BuilderType {
   Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   row: number;
 }
+
+export interface SecurityType {
+  id: number;
+  title: string;
+  description: string;
+}
