@@ -26,13 +26,18 @@ export default {
           "70%": { transform: "scale(1)" },
           "100%": { transform: "scale(1)" },
         },
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         pulse: "pulse 2s ease-out infinite both",
         pulseDot: "pulseDot 2s ease-out infinite both",
+        slide: "slide 20s linear infinite both",
       },
       screens: {
-        xs: "520px", // Replace 'custom' and value as needed
+        xs: "520px",
       },
     },
   },

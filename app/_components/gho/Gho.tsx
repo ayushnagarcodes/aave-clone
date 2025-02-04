@@ -23,7 +23,7 @@ function Gho() {
       <div className="section-inner">
         <div className="md:px-6">
           <AnimatedHeading text="GHO" level={2} delay={0.4} />
-          <p className="mt-3 max-w-[24em] font-sans text-xl font-medium leading-[135%] tracking-[-0.33px] text-[--fg-2]">
+          <p className="mt-3 max-w-[24em] text-lg md:text-xl font-medium leading-[135%] tracking-[-0.33px] text-[--fg-2]">
             GHO is the only decentralised, overcollateralised stablecoin native
             to the Aave Protocol.
           </p>

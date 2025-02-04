@@ -17,7 +17,7 @@ function Builders() {
       <div className="section-inner">
         <div className="md:px-6">
           <AnimatedHeading text="Aave everywhere." level={2} delay={0.4} />
-          <p className="mt-3 text-xl font-medium leading-[135%] tracking-[-0.33px] text-[--fg-2]">
+          <p className="mt-3 text-lg md:text-xl font-medium leading-[135%] tracking-[-0.33px] text-[--fg-2]">
             Join Aave’s growing constellation of builders.
           </p>
         </div>
