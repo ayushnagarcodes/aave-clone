@@ -1,4 +1,4 @@
-import AnimatedHeading from "@/_components/AnimatedHeading";
+import AnimatedText from "@/_components/AnimatedText";
 import LinkMore from "@/_components/LinkMore";
 import SvgGho from "@/_components/gho/svgs/SvgGho";
 import SvgGaugeMeter from "@/_components/gho/svgs/SvgGaugeMeter";
@@ -22,7 +22,9 @@ function Gho() {
     <section className="section-styles">
       <div className="section-inner">
         <div className="md:px-6">
-          <AnimatedHeading text="GHO" level={2} delay={0.4} />
+          <h2>
+            <AnimatedText text="GHO" delay={0.4} />
+          </h2>
           <p className="mt-3 max-w-[24em] text-lg md:text-xl font-medium leading-[135%] tracking-[-0.33px] text-[--fg-2]">
             GHO is the only decentralised, overcollateralised stablecoin native
             to the Aave Protocol.

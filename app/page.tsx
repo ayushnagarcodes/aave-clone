@@ -10,6 +10,7 @@ import Features from "@/_components/features/Features";
 import Gho from "@/_components/gho/Gho";
 import Builders from "@/_components/builders/Builders";
 import TrustedBy from "@/_components/trustedBy/TrustedBy";
+import Cta from "@/_components/cta/Cta";
 
 const homeVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
@@ -34,6 +35,7 @@ export default function Home() {
         <Gho />
         <Builders />
         <TrustedBy />
+        <Cta />
       </motion.main>
     </>
   );

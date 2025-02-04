@@ -1,4 +1,4 @@
-import AnimatedHeading from "@/_components/AnimatedHeading";
+import AnimatedText from "@/_components/AnimatedText";
 import SvgIntro from "@/_components/intro/svgs/SvgIntro";
 import type { IntroTabType } from "@/_types/types";
 import { useState } from "react";
@@ -11,12 +11,9 @@ function Intro() {
   return (
     <section className="section-styles section-border-b !pt-12 md:!pt-[9.375rem]">
       <div className="section-inner">
-        <AnimatedHeading
-          level={2}
-          text="Meet Aave."
-          className="text-center"
-          delay={0.4}
-        />
+        <h2 className="text-center">
+          <AnimatedText text="Meet Aave." delay={0.4} />
+        </h2>
 
         <p className="mt-3 text-center text-lg md:text-xl font-medium !leading-[135%] tracking-[-0.33px] text-[--fg-2]">
           Earn interest and borrow assets.

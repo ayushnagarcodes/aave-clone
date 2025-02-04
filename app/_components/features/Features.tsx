@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useInView } from "motion/react";
 import { featureCardsData, featureRowsData } from "@/_lib/data";
-import AnimatedHeading from "@/_components/AnimatedHeading";
+import AnimatedText from "@/_components/AnimatedText";
 import FeatureCard from "@/_components/features/FeatureCard";
 import SvgSwap from "@/_components/features/svgs/SvgSwap";
 import SvgStake from "@/_components/features/svgs/SvgStake";
@@ -35,12 +35,9 @@ function Features() {
   return (
     <section className="section-styles section-border-b">
       <div className="section-inner">
-        <AnimatedHeading
-          text="DeFi, unlocked."
-          level={2}
-          delay={0.4}
-          className="md:px-6"
-        />
+        <h2 className="md:px-6">
+          <AnimatedText text="DeFi, unlocked." delay={0.4} />
+        </h2>
 
         <div className="grid grid-cols-1 grid-rows-[repeat(4,18.75rem)] md:grid-cols-2 md:grid-rows-[18.75rem_18.75rem] gap-y-12 gap-x-10 mt-12">
           <FeatureCard ref={swapCardRef} data={featureCardsData[0]}>

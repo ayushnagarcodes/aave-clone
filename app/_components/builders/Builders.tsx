@@ -1,7 +1,7 @@
 import { buildersData } from "@/_lib/data";
-import AnimatedHeading from "@/_components/AnimatedHeading";
+import AnimatedText from "@/_components/AnimatedText";
 import SvgLogoBig from "@/_components/builders/svgs/SvgLogoBig";
-import BuilderLogoContainer from "./BuilderLogoContainer";
+import BuilderLogoContainer from "@/_components/builders/BuilderLogoContainer";
 import { useRef } from "react";
 import { useInView } from "motion/react";
 
@@ -16,7 +16,9 @@ function Builders() {
     <section className="section-styles">
       <div className="section-inner">
         <div className="md:px-6">
-          <AnimatedHeading text="Aave everywhere." level={2} delay={0.4} />
+          <h2>
+            <AnimatedText text="Aave everywhere." delay={0.4} />
+          </h2>
           <p className="mt-3 text-lg md:text-xl font-medium leading-[135%] tracking-[-0.33px] text-[--fg-2]">
             Join Aave’s growing constellation of builders.
           </p>

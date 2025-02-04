@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import SvgPulse from "@/_components/hero/svgs/SvgPulse";
 import SvgCircles from "@/_components/hero/svgs/SvgCircles";
 import { easeSwift } from "@/_lib/utils";
-import AnimatedHeading from "@/_components/AnimatedHeading";
+import AnimatedText from "@/_components/AnimatedText";
 
 const ctaBtnVariants = {
   inactive: { scaleX: 0.95, scaleY: 0.8 },
@@ -74,7 +74,9 @@ function Hero() {
           </Link>
         </motion.div>
 
-        <AnimatedHeading text="Access the full power of DeFi." level={1} />
+        <h1>
+          <AnimatedText text="Access the full power of DeFi." />
+        </h1>
 
         <motion.div
           variants={generateHeroChildVariants(32)}
