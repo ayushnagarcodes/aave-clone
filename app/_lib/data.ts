@@ -1,5 +1,6 @@
 import type {
   BuilderType,
+  FaqType,
   FeatureType,
   MenuType,
   SecurityType,
@@ -240,5 +241,32 @@ export const securityCardsData: SecurityType[] = [
     title: "5 Years Strong",
     description:
       "Aave is leading the DeFi Renaissance, committed to it’s mission of bringing global finance onchain.",
+  },
+];
+
+export const faqsData: FaqType[] = [
+  {
+    id: 1,
+    question: "What is Aave?",
+    answer:
+      "Aave is a decentralised non-custodial liquidity protocol where users can participate as suppliers or borrowers. Suppliers provide liquidity to the market while earning interest, and borrowers can access liquidity by providing collateral that exceeds the borrowed amount.",
+  },
+  {
+    id: 2,
+    question: "Where are supplied tokens stored?",
+    answer:
+      "Supplied tokens are stored in publicly accessible smart contracts that enable overcollateralised borrowing according to governance-approved parameters. The Aave Protocol smart contracts have been audited and formally verified by third parties.",
+  },
+  {
+    id: 3,
+    question: "Does Aave have risks?",
+    answer:
+      "No protocol can be considered entirely risk free, but extensive steps have been taken to minimize these risks as much as possible -- the Aave Protocol code is publicly available and auditable by anyone, and has been audited by multiple smart contract auditors. Any code changes must be executed through the onchain governance processes. Additionally, there is an ongoing bug bounty campaign and service providers specializing in technical reviews and risk mitigation.",
+  },
+  {
+    id: 4,
+    question: "What is the Aave token?",
+    answer:
+      "AAVE is used as the centre of gravity of Aave Protocol governance. AAVE is used to vote and decide on the outcome of Aave Improvement Proposals (AIPs). Apart from this, AAVE can be staked within the protocol Safety Module to provide a backstop in the case of a shortfall event, and earn incentives for doing so.",
   },
 ];

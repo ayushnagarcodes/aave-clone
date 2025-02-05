@@ -35,3 +35,9 @@ export interface SecurityType {
   title: string;
   description: string;
 }
+
+export interface FaqType {
+  id: number;
+  question: string;
+  answer: string;
+}

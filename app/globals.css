@@ -37,6 +37,10 @@
   .section-inner {
     @apply relative w-full max-w-[986px];
   }
+
+  .section-divider {
+    @apply mx-auto w-[min(100%,1082px)] max-w-[90%] h-[.8px] bg-[--border-1];
+  }
 }
 
 :root {

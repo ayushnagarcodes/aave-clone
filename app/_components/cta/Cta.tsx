@@ -37,7 +37,7 @@ function Cta() {
                 fontFeatureSettings: "tnum",
                 fontVariantNumeric: "tabular-nums",
               }}
-              className="text-center inline-flex justify-center text-[#b5e1ff] text-[color(display-p3 .7098 .8824 1)] w-[7.5rem] md:w-[9.5rem] tracking-wide"
+              className="text-center inline-flex justify-center text-[#b5e1ff] text-[color(display-p3_.7098_.8824_1)] w-[7.5rem] md:w-[9.5rem] tracking-wide"
             >
               <NumberCounter
                 value={201_378}

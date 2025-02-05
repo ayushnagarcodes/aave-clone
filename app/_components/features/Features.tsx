@@ -33,7 +33,7 @@ function Features() {
   );
 
   return (
-    <section className="section-styles section-border-b">
+    <section className="section-styles">
       <div className="section-inner">
         <h2 className="md:px-6">
           <AnimatedText text="DeFi, unlocked." delay={0.4} />

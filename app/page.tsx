@@ -12,6 +12,7 @@ import Builders from "@/_components/builders/Builders";
 import TrustedBy from "@/_components/trustedBy/TrustedBy";
 import Cta from "@/_components/cta/Cta";
 import Security from "@/_components/security/Security";
+import FaqContainer from "@/_components/faq/FaqContainer";
 
 const homeVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
@@ -38,6 +39,9 @@ export default function Home() {
         <TrustedBy />
         <Cta />
         <Security />
+        <hr className="section-divider" />
+        <FaqContainer />
+        <hr className="section-divider" />
       </motion.main>
     </>
   );
