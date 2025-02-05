@@ -2,6 +2,7 @@ import type {
   BuilderType,
   FaqType,
   FeatureType,
+  FooterType,
   MenuType,
   SecurityType,
 } from "@/_types/types";
@@ -268,5 +269,23 @@ export const faqsData: FaqType[] = [
     question: "What is the Aave token?",
     answer:
       "AAVE is used as the centre of gravity of Aave Protocol governance. AAVE is used to vote and decide on the outcome of Aave Improvement Proposals (AIPs). Apart from this, AAVE can be staked within the protocol Safety Module to provide a backstop in the case of a shortfall event, and earn incentives for doing so.",
+  },
+];
+
+export const footerData: FooterType[] = [
+  {
+    id: 1,
+    title: "Resources",
+    subLinks: ["Brand", "FAQ", "Help & Support", "Governance"],
+  },
+  {
+    id: 2,
+    title: "Developers",
+    subLinks: ["Documentation", "Technical Paper", "Security", "Bug Bounty"],
+  },
+  {
+    id: 3,
+    title: "Company",
+    subLinks: ["Privacy Policy", "Terms of Use", "Contact"],
   },
 ];

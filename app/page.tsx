@@ -14,6 +14,7 @@ import Forum from "@/_components/forum/Forum";
 import Security from "@/_components/security/Security";
 import FaqContainer from "@/_components/faq/FaqContainer";
 import Cta from "@/_components/cta/Cta";
+import Footer from "@/_components/footer/Footer";
 
 const homeVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
@@ -45,6 +46,8 @@ export default function Home() {
         <hr className="section-divider" />
         <Cta />
       </motion.main>
+
+      <Footer />
     </>
   );
 }

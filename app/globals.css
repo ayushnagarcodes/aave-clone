@@ -81,6 +81,28 @@
     hsla(0, 0%, 100%, 0.042) 86.1%, hsla(0, 0%, 100%, 0.021) 91%,
     hsla(0, 0%, 100%, 0.008) 95.2%, hsla(0, 0%, 100%, 0.002) 98.2%,
     hsla(0, 0%, 100%, 0);
+
+  --footer-line-gradient: linear-gradient(
+      0deg,
+      color(display-p3 1 1 1/0.1),
+      color(display-p3 1 1 1/0.1)
+    ),
+    linear-gradient(
+      90deg,
+      color(display-p3 0.4196 0.8078 0.9608),
+      color(display-p3 1 0.7216 0) 8.3%,
+      color(display-p3 0.1216 0.502 0.4824) 16.6%,
+      color(display-p3 0.102 0.5333 0.9725) 24.9%,
+      color(display-p3 0.949 0.2863 0) 33.2%,
+      color(display-p3 0.5951 0.587 1) 41.5%,
+      color(display-p3 0.4196 0.8078 0.9608) 49.8%,
+      color(display-p3 1 0.7216 0) 58.1%,
+      color(display-p3 0.1216 0.502 0.4824) 66.4%,
+      color(display-p3 0.102 0.5333 0.9725) 74.7%,
+      color(display-p3 0.949 0.2863 0) 83%,
+      color(display-p3 0.5951 0.587 1) 91.3%,
+      color(display-p3 0.4196 0.8078 0.9608)
+    );
 }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -183,4 +205,9 @@
 .trusted-by::after {
   right: 0;
   background-image: linear-gradient(270deg, var(--gradient-stops));
+}
+
+.footer-line::after {
+  background-image: var(--footer-line-gradient);
+  background-size: 200% 200%;
 }

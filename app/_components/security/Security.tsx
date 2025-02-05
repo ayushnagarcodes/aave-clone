@@ -2,10 +2,10 @@ import AnimatedText from "@/_components/AnimatedText";
 import SecurityCard from "@/_components/security/SecurityCard";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import SvgAudits from "./svgs/SvgAudits";
-import SvgBounty from "./svgs/SvgBounty";
-import SvgShortfall from "./svgs/SvgShortfall";
-import Svg5Years from "./svgs/Svg5Years";
+import SvgAudits from "@/_components/security/svgs/SvgAudits";
+import SvgBounty from "@/_components/security/svgs/SvgBounty";
+import SvgShortfall from "@/_components/security/svgs/SvgShortfall";
+import Svg5Years from "@/_components/security/svgs/Svg5Years";
 import { securityCardsData } from "@/_lib/data";
 
 const viewportOptions = { amount: 1, once: true };

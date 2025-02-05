@@ -30,11 +30,17 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        slideFooterLine: {
+          "0%": { backgroundPosition: "0 0" },
+          "70%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "100% 0" },
+        },
       },
       animation: {
         pulse: "pulse 2s ease-out infinite both",
         pulseDot: "pulseDot 2s ease-out infinite both",
         slide: "slide 20s linear infinite both",
+        slideFooterLine: "slideFooterLine 6s ease-in-out infinite",
       },
       screens: {
         xs: "520px",

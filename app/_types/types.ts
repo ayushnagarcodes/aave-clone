@@ -41,3 +41,9 @@ export interface FaqType {
   question: string;
   answer: string;
 }
+
+export interface FooterType {
+  id: number;
+  title: string;
+  subLinks: string[];
+}
