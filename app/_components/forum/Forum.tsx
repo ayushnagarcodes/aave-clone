@@ -5,17 +5,17 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import NumberCounter from "@/_components/NumberCounter";
 import { easeSwift } from "@/_lib/utils";
-import SvgCtaRings from "@/_components/cta/svgs/SvgCtaRings";
+import SvgForumBg from "@/_components/forum/svgs/SvgForumBg";
 
-function Cta() {
-  const ctaContainerRef = useRef<HTMLDivElement>(null);
-  const isCtaContainerInView = useInView(ctaContainerRef, {
+function Forum() {
+  const forumContainerRef = useRef<HTMLDivElement>(null);
+  const isForumContainerInView = useInView(forumContainerRef, {
     amount: 0.5,
     once: true,
   });
 
   return (
-    <section ref={ctaContainerRef} className="section-styles md:!py-[75px]">
+    <section ref={forumContainerRef} className="section-styles md:!py-[75px]">
       <div className="section-inner">
         <div className="flex justify-center items-center flex-col relative z-0 rounded-[16px] md:aspect-[986/480] w-full bg-[#00498b] bg-[color(display-p3 .1098 .2824 .5255)] text-center overflow-hidden p-12 md:py-4 md:px-16">
           <h2 className="my-4 text-[--bg-1] text-[2rem] leading-[120%] tracking-[-0.075rem] md:text-[2.5rem] md:leading-[135%] md:tracking-[-0.8px]">
@@ -42,7 +42,7 @@ function Cta() {
               <NumberCounter
                 value={201_378}
                 initialValue={170_000}
-                isInView={isCtaContainerInView}
+                isInView={isForumContainerInView}
               />
             </motion.span>
             <AnimatedText text=" others." delay={0.7} />
@@ -63,11 +63,11 @@ function Cta() {
             <IconArrowRightMedium className="group-hover:translate-x-[.125rem] block transition-[inherit]" />
           </Link>
 
-          <SvgCtaRings isInView={isCtaContainerInView} />
+          <SvgForumBg isInView={isForumContainerInView} />
         </div>
       </div>
     </section>
   );
 }
 
-export default Cta;
+export default Forum;

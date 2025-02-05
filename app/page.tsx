@@ -10,7 +10,7 @@ import Features from "@/_components/features/Features";
 import Gho from "@/_components/gho/Gho";
 import Builders from "@/_components/builders/Builders";
 import TrustedBy from "@/_components/trustedBy/TrustedBy";
-import Cta from "@/_components/cta/Cta";
+import Forum from "@/_components/forum/Forum";
 import Security from "@/_components/security/Security";
 import FaqContainer from "@/_components/faq/FaqContainer";
 
@@ -37,7 +37,7 @@ export default function Home() {
         <Gho />
         <Builders />
         <TrustedBy />
-        <Cta />
+        <Forum />
         <Security />
         <hr className="section-divider" />
         <FaqContainer />

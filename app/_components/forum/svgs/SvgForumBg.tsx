@@ -1,7 +1,7 @@
 import { easeSwift } from "@/_lib/utils";
 import { motion } from "motion/react";
 
-interface SvgCtaRingsProps {
+interface SvgForumBgProps {
   isInView: boolean;
 }
 
@@ -32,7 +32,7 @@ const ringRotateVariants = {
   }),
 };
 
-function SvgCtaRings({ isInView }: SvgCtaRingsProps) {
+function SvgForumBg({ isInView }: SvgForumBgProps) {
   return (
     <motion.svg
       variants={{ hidden: {}, visible: {}, animate: {} }}
@@ -1388,4 +1388,4 @@ function SvgCtaRings({ isInView }: SvgCtaRingsProps) {
   );
 }
 
-export default SvgCtaRings;
+export default SvgForumBg;
